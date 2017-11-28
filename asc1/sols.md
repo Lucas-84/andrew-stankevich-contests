@@ -1,7 +1,7 @@
 D: Compute the sum algebraically: $\sum_{u\in V} \text{deg}(u)^2$. Complexity: $O(N)$
 
 G: Represent $(x,y)=(B,S)$ in the plane. Sort the people by decreasing $y$, then use dynamic programming
-$dp(i)=1+\max_{j>i,x_j>x_i}dp(j)$, with a segment tree to query for the best transition. Complexity: $O(N \log N)$  
+$\text{dp}(i)=1+\max_{j>i,x_j>x_i}\text{dp}(j)$, with a segment tree to query for the best transition. Complexity: $O(N \log N)$  
 Alternative solution: note that the dynamic programming algorithm actually computes LIS.
 
 E: Build the transition matrix for each frontier, then use fast exponentiation to find the total number
